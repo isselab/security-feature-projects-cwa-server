@@ -3,9 +3,13 @@ package app.coronawarn.server.services.submission.verification;
 import java.util.Objects;
 import java.util.UUID;
 
+//import org.gravity.security.annotations.requirements.Critical;
+//import org.gravity.security.annotations.requirements.Secrecy;
+
 /**
  * A representation of a One-Time-Passcode (OTP).
  */
+//@Critical(secrecy = {"Tan.getTan():UUID"})
 public class Otp {
   /**
    * Creates a new {@link #Otp} instance for the given tan string.
@@ -55,6 +59,7 @@ public class Otp {
    *
    * @return the tan UUID as a string.
    */
+//  @Secrecy
   @Override
   public String toString() {
     return otp.toString();

@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+
 /**
  * This is a Spring Cloud Feign based HTTP client that allows type-safe HTTP calls and abstract the implementation
  * away.

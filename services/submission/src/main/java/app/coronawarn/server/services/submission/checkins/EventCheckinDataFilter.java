@@ -24,7 +24,6 @@ import org.springframework.stereotype.Component;
 public class EventCheckinDataFilter {
 
   private static final Logger logger = LoggerFactory.getLogger(EventCheckinDataFilter.class);
-
   private final SubmissionServiceConfig submissionServiceConfig;
   private final PreDistributionTrlValueMappingProvider trlValueMappingProvider;
 

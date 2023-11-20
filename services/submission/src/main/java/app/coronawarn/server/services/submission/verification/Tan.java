@@ -5,6 +5,8 @@ package app.coronawarn.server.services.submission.verification;
 import java.util.Objects;
 import java.util.UUID;
 
+//import org.gravity.security.annotations.requirements.Secrecy;
+
 /**
  * A representation of a tan.
  */
@@ -31,6 +33,7 @@ public class Tan {
    * Returns the tan entity as UUID.
    * @return the tan.
    */
+//  @Secrecy
   public UUID getTan() {
     return tan;
   }

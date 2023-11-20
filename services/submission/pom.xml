@@ -5,7 +5,7 @@
   <parent>
     <artifactId>services</artifactId>
     <groupId>app.coronawarn.server</groupId>
-    <version>${revision}</version>
+    <version>3.3.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
