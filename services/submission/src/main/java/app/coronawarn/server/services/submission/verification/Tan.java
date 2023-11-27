@@ -5,7 +5,7 @@ package app.coronawarn.server.services.submission.verification;
 import java.util.Objects;
 import java.util.UUID;
 
-//import org.gravity.security.annotations.requirements.Secrecy;
+import org.gravity.security.annotations.requirements.Secrecy;
 
 /**
  * A representation of a tan.
@@ -24,6 +24,7 @@ public class Tan {
    * @return The Tan instance
    * @throws IllegalArgumentException when the given tan string is not a valid UUID.
    */
+  @Secrecy
   public static Tan of(String tanString) {
     UUID tan = UUID.fromString(tanString.trim());
     return new Tan(tan);
@@ -33,7 +34,7 @@ public class Tan {
    * Returns the tan entity as UUID.
    * @return the tan.
    */
-//  @Secrecy
+  @Secrecy
   public UUID getTan() {
     return tan;
   }
@@ -43,6 +44,7 @@ public class Tan {
    *
    * @return the tan UUID as a string.
    */
+//  @Secrecy
   @Override
   public String toString() {
     return tan.toString();

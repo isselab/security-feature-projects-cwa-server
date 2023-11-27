@@ -3,6 +3,8 @@ package app.coronawarn.server.services.submission.monitoring;
 import app.coronawarn.server.services.submission.verification.Tan;
 import app.coronawarn.server.services.submission.verification.VerificationServerClient;
 import feign.FeignException;
+
+import org.gravity.security.annotations.requirements.Critical;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.actuate.health.Health;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Component;
  * response code is 2xx or 404, else sets health to down, and marks
  * application as not ready for requests.
  */
+@Critical(secrecy= {"Tan.of(String):Tan"})
 @Component("verificationService")
 public class VerificationServiceHealthIndicator implements HealthIndicator {
 

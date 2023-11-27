@@ -1,9 +1,11 @@
 package app.coronawarn.server.services.submission.verification;
 
+import org.gravity.security.annotations.requirements.Critical;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.client.RestClientException;
 
+@Critical(secrecy = {"Tan.of(String):Tan"})
 public abstract class TanVerificationService {
 
   public static final String CWA_TELETAN_TYPE_RESPONSE_HEADER = "X-CWA-TELETAN-TYPE";

@@ -2,6 +2,8 @@ package app.coronawarn.server.services.submission.verification;
 
 import static org.springframework.util.ObjectUtils.isEmpty;
 
+import org.gravity.security.annotations.requirements.Critical;
+
 import feign.FeignException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Service;
 /**
  * The SRS OTP verifier performs the verification of SRS OTPs.
  */
+@Critical(secrecy= {"of(Tan):Otp"})
 @Service
 public class SrsOtpVerifier extends TanVerificationService {
 
