@@ -20,6 +20,9 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.gravity.security.annotations.requirements.Critical;
+
+@Critical(secrecy = {"DiagnosisKey.getKeyData():byte[]"})
 public class DiagnosisKeyServiceTestHelper {
 
   private static final Random random = new Random();

@@ -12,6 +12,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.gravity.security.annotations.requirements.Critical;
+
+// part of test? assertThat test function
+@Critical(secrecy = {"DiagnosisKey.getKeyData():byte[]"})
 public final class SubmissionAssertions {
 
   public static void assertElementsCorrespondToEachOther(SubmissionPayload submissionPayload,

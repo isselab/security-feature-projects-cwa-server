@@ -21,6 +21,8 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.constraints.Size;
+
+import org.gravity.security.annotations.requirements.Secrecy;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.data.annotation.Id;
 
@@ -120,6 +122,7 @@ public class DiagnosisKey {
    *
    * @return keyData
    */
+  @Secrecy
   public byte[] getKeyData() {
     return keyData;
   }

@@ -10,6 +10,8 @@ import app.coronawarn.server.common.protocols.external.exposurenotification.Repo
 import app.coronawarn.server.common.protocols.internal.SubmissionPayload.SubmissionType;
 import java.util.Random;
 import java.util.Set;
+
+import org.gravity.security.annotations.requirements.Critical;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -17,6 +19,7 @@ import org.junit.jupiter.params.provider.EnumSource.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 
+@Critical(secrecy = {"DiagnosisKey.getKeyData():byte[]"})
 @DataJdbcTest
 class EnsureSrsIsNotSendToEfgsTest {
 

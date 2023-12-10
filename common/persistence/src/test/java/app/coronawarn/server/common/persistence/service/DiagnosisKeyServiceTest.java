@@ -31,6 +31,8 @@ import java.time.temporal.TemporalUnit;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
+
+import org.gravity.security.annotations.requirements.Critical;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -40,6 +42,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 
+@Critical(secrecy = {"DiagnosisKey.getKeyData():byte[]"})
 @DataJdbcTest
 class DiagnosisKeyServiceTest {
 

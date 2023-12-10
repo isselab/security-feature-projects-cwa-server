@@ -69,6 +69,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 import org.apache.commons.lang3.tuple.Pair;
 import org.assertj.core.data.Index;
+import org.gravity.security.annotations.requirements.Critical;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -87,6 +88,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity.BodyBuilder;
 import org.springframework.test.annotation.DirtiesContext;
 
+@Critical(secrecy = {"DiagnosisKey.getKeyData():byte[]"})
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DirtiesContext
 @TestInstance(Lifecycle.PER_CLASS)

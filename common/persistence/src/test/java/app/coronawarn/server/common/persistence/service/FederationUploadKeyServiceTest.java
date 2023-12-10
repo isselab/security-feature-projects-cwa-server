@@ -18,11 +18,13 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.assertj.core.api.Assertions;
+import org.gravity.security.annotations.requirements.Critical;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
+@Critical(secrecy = {"DiagnosisKey.getKeyData():byte[]"})
 @DataJdbcTest
 class FederationUploadKeyServiceTest {
 
